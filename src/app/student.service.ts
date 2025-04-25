@@ -12,11 +12,25 @@ export class StudentService {
 
   constructor(private http: HttpClient) { }
 
-  getStudents() : Observable<Student[]>{
+  //recupera todos os estudantes
+  getAll() : Observable<Student[]>{
     return this.http.get<Student[]>(this.apiUrl);
   }
 
-  saveStudent(student: Student): Observable<Student>{
+  //salva todos os estudantes
+  save(student: Student): Observable<Student>{
     return this.http.post<Student>(this.apiUrl, student);    
   }
+  
+  //remove um estudante
+  delete(student:Student):Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${student.id}`);
+  }
+
+  //atualizar os dados do estudante
+  update(student:Student):Observable<Student>{
+    return this.http.put<Student>(`${this.apiUrl}/${student.id}` , student);
+  }
+
+
 }
