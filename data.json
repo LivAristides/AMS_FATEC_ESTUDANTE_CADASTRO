@@ -1,11 +1,6 @@
 {
   "students": [
     {
-      "id": 1,
-      "name": "José Maria",
-      "course": "Computação"
-    },
-    {
       "id": 2,
       "name": "Fernanda Silva",
       "course": "Computação"
@@ -14,6 +9,11 @@
       "id": 3,
       "name": "Mario Antunes",
       "course": "Matemática"
+    },
+    {
+      "id": 4,
+      "name": "livia",
+      "course": "ti"
     }
   ]
 }
